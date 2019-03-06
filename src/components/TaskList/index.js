@@ -42,14 +42,14 @@ const TaskList = (props) => {
     switch (filterTasksReducer) {
         case SHOW_ALL_TASKS:
             //tasksToShow = tasks.filter(el => !el.remove);
-            tasksToShow = modifyTasksReducer.tasks;
+            tasksToShow = modifyTasksReducer.tasks.filter(el => !el.remove);
             break;
         case SHOW_PROCESS_TASKS:
             tasksToShow = modifyTasksReducer.tasks.filter(el => el.process);
             break;
         case SHOW_DONE_TASKS:
-            //tasksToShow = tasks.filter(el => (el.done && !el.remove));
-            tasksToShow = modifyTasksReducer.tasks.filter(el => el.done);
+            tasksToShow = modifyTasksReducer.tasks.filter(el => (el.done && !el.remove));
+            //tasksToShow = modifyTasksReducer.tasks.filter(el => el.done);
             break;
         case SHOW_REMOVE_TASKS:
             tasksToShow = modifyTasksReducer.tasks.filter(el => el.remove);
