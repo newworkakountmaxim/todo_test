@@ -1,0 +1,9 @@
+div.task-done{
+    background-color: #4caf50;
+}
+div.task-process{
+    background-color: #f4e000;
+}
+div.task-remove{
+    background-color: #f44336;
+}
